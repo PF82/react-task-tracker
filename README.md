@@ -1,6 +1,7 @@
 # Fix
 1. dev tools warning
 2. setTasks not assigned yet?
+3. task.js problem 49:00 of video
 
 # Timestamps:
 0:00 - Intro & Slides
