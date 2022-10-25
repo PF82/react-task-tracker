@@ -32,6 +32,7 @@
 //     title: 'Task Tracker',
 // }
 
+
 // //we can destructure
 // const Header = ({title}) => {
 //     return (
@@ -47,15 +48,48 @@
 // }
 
 
-// PROP TYPES
+// // PROP TYPES (SLITGHLY DIFERENT FROM ONE ON TUTORIAL VIDEO)
 
-import { ReactPropTypes } from "react"
+// import { ReactPropTypes } from "react"
+
+// const Header = ({ title }) => {
+//     return (
+//         <header>
+//             {/* replace static text with just title */}
+//             <h1>{title}</h1>
+//         </header>
+//     )
+// }
+
+// Header.defaultProps = {
+//     title: 'Task Tracker',
+// }
+
+// Header.ReactPropTypes = {
+//     // title: ReactPropTypes.string,
+//     title: ReactPropTypes.string.isRequired, // in case it is required
+// }
+
+
+// STYLING (CSS IN JS)EXAMPLES
+
+// const Header = ({ title }) => {
+//     return (
+//         <header>
+//             <h1 style={{ color: 'red', backgroundColor: 'black' }}>{title}</h1>
+//         </header>
+//     )
+// }
+
+// Header.defaultProps = {
+//     title: 'Task Tracker',
+// }
+
 
 const Header = ({ title }) => {
     return (
         <header>
-            {/* replace static text with just title */}
-            <h1>{title}</h1>
+            <h1 style={headingStyle}>{title}</h1>
         </header>
     )
 }
@@ -64,9 +98,11 @@ Header.defaultProps = {
     title: 'Task Tracker',
 }
 
-Header.ReactPropTypes = {
-    // title: ReactPropTypes.string,
-    title: ReactPropTypes.string.isRequired, // in case it is required
+const headingStyle = {
+    color: 'red',
+    backgroundColor: 'black'
 }
+
+
 
 export default Header
